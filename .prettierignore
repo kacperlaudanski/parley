@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+coverage
+.turbo
+.vercel
+pnpm-lock.yaml
+supabase/.temp
