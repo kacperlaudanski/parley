@@ -1,0 +1,21 @@
+{
+  "name": "@parley/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.11",
+    "@parley/shared": "workspace:*",
+    "hono": "^4.13.21",
+    "pino": "^10.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "pino-pretty": "^13.2.0",
+    "tsx": "^4.23.15"
+  }
+}
