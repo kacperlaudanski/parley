@@ -1,11 +1,11 @@
-import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import globals from 'globals';
+import { defineConfig } from 'eslint/config';
+import prettier from 'eslint-config-prettier';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import prettier from 'eslint-config-prettier';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig(
   { ignores: ['**/dist', '**/coverage', '**/.turbo', '**/node_modules'] },
@@ -15,7 +15,9 @@ export default defineConfig(
   {
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['eslint.config.ts'],
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },

@@ -1,7 +1,7 @@
-import { healthSchema, type Health } from '@parley/shared'
+import { type Health,healthSchema } from '@parley/shared'
 import { useEffect, useState } from 'react'
 
-function App() {
+function App(): React.JSX.Element {
   const [health, setHealth] = useState<Health | null>(null);
 
   useEffect(() => {
